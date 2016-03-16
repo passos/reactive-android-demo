@@ -55,12 +55,12 @@ public class SearchResultAdapter extends ArrayAdapter<Result> {
 		mData.clear();
 		mImages.clear();
 
-		Observable<GoogleImageSearchResponse> mImageSerachObservable = API
+		Observable<GoogleImageSearchResponse> mImageSearchObservable = API
 				.getImageSearchFetcher(API.SEARCH_URL);
 		mAdapterDataSubscription = AndroidObservable.fromActivity(mContext,
-				mImageSerachObservable).subscribe(mAdapterDataObserver);
+				mImageSearchObservable).subscribe(mAdapterDataObserver);
 
-		// mImageSerachObservable.subscribe();
+		// mImageSearchObservable.subscribe();
 	}
 
 	@Override
